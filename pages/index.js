@@ -12,7 +12,7 @@ const Index = () => {
     <Container height="100vh">
       <Navbar page="index" />
       <Flex
-        height="calc(100% - 50px)"
+        height="calc(100% - 100px)"
         flexDir="column"
         justifyContent="space-around"
         alignItems="center"

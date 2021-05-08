@@ -5,10 +5,10 @@ const Navbar = ({ page }) => {
   return (
     <Flex
       width="100%"
-      height="50px"
+      height="100px"
       alignItems="center"
     >
-      <HStack spacing={5}>
+      <HStack spacing={10}>
         <Item href="/" title="Home" selected={page === "index"} />
         <Item href="/projects" title="Projects" selected={page === "projects"} />
       </HStack>
