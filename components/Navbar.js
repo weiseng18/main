@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Flex } from "@chakra-ui/react"
+import { Flex, HStack } from "@chakra-ui/react"
 
 const Navbar = () => {
   return (
@@ -8,9 +8,14 @@ const Navbar = () => {
       height="50px"
       alignItems="center"
     >
-      <Link href="/">
-        Home
-      </Link>
+      <HStack spacing={5}>
+        <Link href="/">
+          Home
+        </Link>
+        <Link href="/projects">
+          Projects
+        </Link>
+      </HStack>
     </Flex>
   )
 }
