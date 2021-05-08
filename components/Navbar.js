@@ -9,14 +9,18 @@ const Navbar = () => {
       alignItems="center"
     >
       <HStack spacing={5}>
-        <Link href="/">
-          Home
-        </Link>
-        <Link href="/projects">
-          Projects
-        </Link>
+        <Item href="/" title="Home" />
+        <Item href="/projects" title="Projects" />
       </HStack>
     </Flex>
+  )
+}
+
+const Item = ({ href, title }) => {
+  return (
+    <Link href={href}>
+      {title}
+    </Link>
   )
 }
 
