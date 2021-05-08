@@ -10,7 +10,7 @@ import Navbar from "../components/Navbar"
 const Index = () => {
   return (
     <Container height="100vh">
-      <Navbar/>
+      <Navbar page="index" />
       <Flex
         height="calc(100% - 50px)"
         flexDir="column"

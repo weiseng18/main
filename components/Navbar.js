@@ -1,7 +1,7 @@
 import Link from "next/link"
-import { Flex, HStack } from "@chakra-ui/react"
+import { Flex, HStack, Box } from "@chakra-ui/react"
 
-const Navbar = () => {
+const Navbar = ({ page }) => {
   return (
     <Flex
       width="100%"
@@ -9,17 +9,17 @@ const Navbar = () => {
       alignItems="center"
     >
       <HStack spacing={5}>
-        <Item href="/" title="Home" />
-        <Item href="/projects" title="Projects" />
+        <Item href="/" title="Home" selected={page === "index"} />
+        <Item href="/projects" title="Projects" selected={page === "projects"} />
       </HStack>
     </Flex>
   )
 }
 
-const Item = ({ href, title }) => {
+const Item = ({ href, title, selected }) => {
   return (
     <Link href={href}>
-      {title}
+      <Box fontWeight={`${selected ? "700" : "400"}`} _hover={{cursor: "pointer"}}>{title}</Box>
     </Link>
   )
 }
