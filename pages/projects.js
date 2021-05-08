@@ -1,6 +1,5 @@
 import {
   Container,
-  Heading,
   Text,
   Flex
 } from "@chakra-ui/react"
