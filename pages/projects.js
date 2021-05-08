@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar"
 
 const Projects = () => {
   return (
-    <Container height="100vh">
+    <Container>
       <Navbar page="projects" />
       <Flex
         flexDir="column"

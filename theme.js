@@ -5,8 +5,18 @@ const fonts = {
   body: "Roboto"
 }
 
+const Container = {
+  baseStyle: {
+    maxW: '70ch',
+    height: '100vh',
+  }
+}
+
 const theme = extendTheme({
-  fonts
+  fonts,
+  components: {
+    Container
+  }
 })
 
 export default theme

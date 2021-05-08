@@ -9,7 +9,7 @@ import Navbar from "../components/Navbar"
 
 const Index = () => {
   return (
-    <Container height="100vh">
+    <Container>
       <Navbar page="index" />
       <Flex
         height="calc(100% - 100px)"
