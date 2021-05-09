@@ -59,9 +59,10 @@ const Project = ({ title, url, tags, children }) => {
       </Link>
       <Box width="60%">
         <HStack spacing={3} mb="2">
-          {tags.map((item) => {
+          {tags.map((item, idx) => {
             return (
               <Text
+                key={idx}
                 backgroundColor="gray.200"
                 color="gray.600"
                 py="1"
