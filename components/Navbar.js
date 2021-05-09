@@ -5,7 +5,7 @@ const Navbar = ({ page }) => {
   return (
     <Flex
       width="100%"
-      height="100px"
+      my={8}
       alignItems="center"
     >
       <HStack spacing={5} divider={<StackDivider borderColor="gray.500" />}>
