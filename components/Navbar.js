@@ -19,7 +19,7 @@ const Navbar = ({ page }) => {
 const Item = ({ href, title, selected }) => {
   return (
     <Link href={href}>
-      <Box fontWeight={`${selected ? "700" : "400"}`} _hover={{cursor: "pointer"}}>{title}</Box>
+      <Box fontWeight={`${selected ? "700" : "400"}`} _hover={{cursor: "pointer", textDecoration: "underline"}}>{title}</Box>
     </Link>
   )
 }
