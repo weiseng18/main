@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Flex, HStack, Box } from "@chakra-ui/react"
+import { Flex, HStack, StackDivider, Box } from "@chakra-ui/react"
 
 const Navbar = ({ page }) => {
   return (
@@ -8,7 +8,7 @@ const Navbar = ({ page }) => {
       height="100px"
       alignItems="center"
     >
-      <HStack spacing={10}>
+      <HStack spacing={5} divider={<StackDivider borderColor="gray.500" />}>
         <Item href="/" title="Home" selected={page === "index"} />
         <Item href="/projects" title="Projects" selected={page === "projects"} />
       </HStack>
