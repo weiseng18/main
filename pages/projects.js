@@ -22,6 +22,7 @@ const Projects = () => {
         <Project
           title="pixelart"
           url="https://weiseng18.github.io/pixelart/"
+          github="https://github.com/weiseng18/pixelart"
           tags={['javascript']}
         >
           Create and animate pixel art in the browser
@@ -29,7 +30,7 @@ const Projects = () => {
 
         <Project
           title="discord-weather"
-          url="https://github.com/weiseng18/discord-weather/"
+          github="https://github.com/weiseng18/discord-weather/"
           tags={['python', 'bot']}
         >
           Gets 2-hour weather forecast from{" "}
@@ -44,7 +45,7 @@ const Projects = () => {
   )
 }
 
-const Project = ({ title, url, tags, children }) => {
+const Project = ({ title, url, github, tags, children }) => {
   return (
     <Flex
       my="16px"
@@ -52,9 +53,24 @@ const Project = ({ title, url, tags, children }) => {
       justifyContent="space-between"
       alignItems="center"
     >
-      <ExternalLink href={url} externalIcon>
-        <Text fontWeight="700">{title}</Text>
-      </ExternalLink>
+      <Flex
+        height="100%"
+        flexDir="column"
+      >
+        <Text fontWeight="700" mb="2">{title}</Text>
+        <HStack spacing={3}>
+          {url && (
+            <ExternalLink href={url} externalIcon>
+              Live
+            </ExternalLink>
+          )}
+          {github && (
+            <ExternalLink href={github} externalIcon>
+              Github
+            </ExternalLink>
+          )}
+        </HStack>
+      </Flex>
       <Box width="60%">
         <HStack spacing={3} mb="2">
           {tags.map((item, idx) => {
