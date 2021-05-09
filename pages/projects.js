@@ -4,12 +4,10 @@ import {
   Flex,
   Box,
   HStack,
-  Link
 } from "@chakra-ui/react"
 
-import { ExternalLinkIcon } from "@chakra-ui/icons"
-
 import Navbar from "../components/Navbar"
+import ExternalLink from "../components/ExternalLink"
 
 const Projects = () => {
   return (
@@ -35,9 +33,9 @@ const Projects = () => {
           tags={['python', 'bot']}
         >
           Gets 2-hour weather forecast from{" "}
-          <Link color="blue.500" href="https://data.gov.sg" isExternal>
+          <ExternalLink href="https://data.gov.sg">
             data.gov.sg
-          </Link>
+          </ExternalLink>
           , and pings everyone if the forecast is rain.
         </Project>
 
@@ -54,9 +52,9 @@ const Project = ({ title, url, tags, children }) => {
       justifyContent="space-between"
       alignItems="center"
     >
-      <Link fontWeight="700" href={url} isExternal>
-        {title} <ExternalLinkIcon mx="2px" />
-      </Link>
+      <ExternalLink href={url} externalIcon>
+        <Text fontWeight="700">{title}</Text>
+      </ExternalLink>
       <Box width="60%">
         <HStack spacing={3} mb="2">
           {tags.map((item, idx) => {
