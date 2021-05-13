@@ -10,5 +10,5 @@ function importAll(r) {
 }
 
 export const projects = importAll(
-  require.context("../pages/projects/", true, /.mdx$/)
+  require.context("../projects/", true, /.mdx$/)
 )
