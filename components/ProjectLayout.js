@@ -5,9 +5,11 @@ import {
   HStack,
 } from "@chakra-ui/react"
 
+import { InfoOutlineIcon } from "@chakra-ui/icons"
+
 import ExternalLink from './ExternalLink'
 
-const ProjectLayout = ({ isOdd, title, url, github, tags, children }) => {
+const ProjectLayout = ({ isOdd, openModal, title, url, github, tags, children }) => {
   let color_background, color_tagBackground, color_tagText
   if (isOdd) {
     color_background = "white"
@@ -33,7 +35,10 @@ const ProjectLayout = ({ isOdd, title, url, github, tags, children }) => {
         height="100%"
         flexDir="column"
       >
-        <Text fontWeight="700" my={2}>{title}</Text>
+        <HStack spacing={3}>
+          <Text fontWeight="700" my={2}>{title}</Text>
+          <InfoOutlineIcon onClick={openModal} cursor="pointer"/>
+        </HStack>
         <HStack spacing={3}>
           {url && (
             <ExternalLink href={url} externalIcon>
