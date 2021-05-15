@@ -3,7 +3,7 @@ import ProjectLayout from "./ProjectLayout"
 const ProjectDisplay = ({ project, idx }) => {
   const {
     link,
-    module: { 
+    index: {
       meta,
       default: Content,
     },
