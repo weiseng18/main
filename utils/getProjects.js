@@ -3,10 +3,15 @@
  */
 
 function importAll(r) {
-  return r.keys().map((fileName) => ({
-    link: fileName.substr(1).replace(/\/index\.mdx$/, ""),
-    index: r(fileName)
-  }))
+  return r.keys().map((file) => {
+    const path = file.substr(1).replace(/\/index.mdx$/, "")
+    const index = require("../projects" + path + "/index.mdx")
+
+    return {
+      link: path,
+      index,
+    }
+  })
 }
 
 export const projects = importAll(
