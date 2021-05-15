@@ -19,6 +19,7 @@ const ProjectModal = ({ isOpen, onClose, meta, Content }) => {
       onClose={onClose}
       isCentered
       size="lg"
+      scrollBehavior="inside"
     >
       <ModalOverlay />
       <ModalContent>
