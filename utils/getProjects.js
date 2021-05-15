@@ -1,5 +1,5 @@
 /**
- * This module exports a constant, projects, an array of all the items in ../pages/projects
+ * This module exports a constant, projects, an array of all the index.mdx in /projects
  */
 
 function importAll(r) {
@@ -10,5 +10,5 @@ function importAll(r) {
 }
 
 export const projects = importAll(
-  require.context("../projects/", true, /.mdx$/)
+  require.context("../projects/", true, /index.mdx$/)
 )
