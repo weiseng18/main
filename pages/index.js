@@ -22,7 +22,7 @@ const Index = () => {
         <Navbar page="index" />
         <Flex flexDir="column" justifyContent="center" flexGrow={1}>
           <Stack spacing={10} alignItems="center" mb={16}>
-            <Text>Hey there, I'm Wei Seng.</Text>
+            <Text my={0}>Hey there, I'm Wei Seng.</Text>
             <Text>This is where I consolidate my side projects.</Text>
             <HStack spacing={5} divider={<StackDivider borderColor="gray.300" />}>
               <SocialItem
