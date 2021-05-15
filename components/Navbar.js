@@ -5,8 +5,11 @@ const Navbar = ({ page }) => {
   return (
     <Flex
       width="100%"
-      my={8}
+      py={8}
       alignItems="center"
+      position="sticky"
+      top="0"
+      bgColor="white"
     >
       <HStack spacing={5} divider={<StackDivider borderLeft="1px" borderColor="gray.500" />}>
         <Item href="/" title="Home" selected={page === "index"} />
