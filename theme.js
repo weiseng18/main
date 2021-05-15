@@ -1,7 +1,7 @@
 import { extendTheme } from "@chakra-ui/react"
 
 const fonts = {
-  heading: "Poppins",
+  heading: "Roboto",
   body: "Roboto"
 }
 
