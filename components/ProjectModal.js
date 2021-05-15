@@ -26,8 +26,6 @@ const ProjectModal = ({ isOpen, onClose, meta, Content }) => {
         <ModalCloseButton bgColor="white" border="none" cursor="pointer" />
         <ModalHeader py={0}>
           <Heading mt={8} mb={2}>{meta.title}</Heading>
-        </ModalHeader>
-        <ModalBody>
           <HStack spacing={5}>
             {meta.url && (
               <ExternalLink href={meta.url} externalIcon>
@@ -47,6 +45,8 @@ const ProjectModal = ({ isOpen, onClose, meta, Content }) => {
                   key={idx}
                   backgroundColor="gray.200"
                   color="gray.600"
+                  fontSize="md"
+                  fontWeight="400"
                   py="1"
                   px="3"
                   borderRadius="25px"
@@ -56,6 +56,8 @@ const ProjectModal = ({ isOpen, onClose, meta, Content }) => {
               )
             })}
           </HStack>
+        </ModalHeader>
+        <ModalBody>
           <Content />
         </ModalBody>
       </ModalContent>

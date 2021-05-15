@@ -1,4 +1,4 @@
-import { Flex, Link } from "@chakra-ui/react"
+import { Flex, Link, Text } from "@chakra-ui/react"
 import { ExternalLinkIcon } from "@chakra-ui/icons"
 
 const ExternalLink = ({ href, children, externalIcon }) => {
@@ -6,7 +6,8 @@ const ExternalLink = ({ href, children, externalIcon }) => {
     return (
       <Link color="blue.500" href={href} isExternal>
         <Flex alignItems="center">
-          {children} <ExternalLinkIcon mx="4px" />
+          <Text fontSize="md" fontWeight="400">{children}</Text>
+          <ExternalLinkIcon mx="4px" />
         </Flex>
       </Link>
     )
