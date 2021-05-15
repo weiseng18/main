@@ -8,7 +8,7 @@ const Navbar = ({ page }) => {
       my={8}
       alignItems="center"
     >
-      <HStack spacing={5} divider={<StackDivider borderColor="gray.500" />}>
+      <HStack spacing={5} divider={<StackDivider borderLeft="1px" borderColor="gray.500" />}>
         <Item href="/" title="Home" selected={page === "index"} />
         <Item href="/projects" title="Projects" selected={page === "projects"} />
       </HStack>
