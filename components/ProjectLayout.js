@@ -29,11 +29,11 @@ const ProjectLayout = ({ isOdd, openModal, title, url, github, tags, children })
       alignItems="center"
       bgColor={color_background}
       py={4}
-      px={2}
     >
       <Flex
         height="100%"
         flexDir="column"
+        pl={4}
       >
         <HStack spacing={3}>
           <Text fontWeight="700" my={2}>{title}</Text>
@@ -52,7 +52,7 @@ const ProjectLayout = ({ isOdd, openModal, title, url, github, tags, children })
           )}
         </HStack>
       </Flex>
-      <Box width="60%">
+      <Box width="60%" pr={4}>
         <HStack spacing={3} mb="2">
           {tags.map((item, idx) => {
             return (
