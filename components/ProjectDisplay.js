@@ -1,6 +1,6 @@
 import ProjectLayout from "./ProjectLayout"
 
-const ProjectDisplay = ({ project }) => {
+const ProjectDisplay = ({ project, idx }) => {
   const {
     link,
     module: { 
@@ -11,6 +11,7 @@ const ProjectDisplay = ({ project }) => {
 
   return (
     <ProjectLayout
+      isOdd={idx%2 == 1}
       title={meta.title}
       url={meta.url}
       github={meta.github}
