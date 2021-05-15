@@ -7,6 +7,10 @@ const ProjectDisplay = ({ project, idx }) => {
       meta,
       default: Content,
     },
+    full: {
+      meta: fullMeta,
+      default: FullContent,
+    },
   } = project
 
   return (
