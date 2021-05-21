@@ -3,6 +3,7 @@ import {
   Flex,
   Box,
   HStack,
+  IconButton,
 } from "@chakra-ui/react"
 
 import { InfoOutlineIcon } from "@chakra-ui/icons"
@@ -37,7 +38,13 @@ const ProjectLayout = ({ isOdd, openModal, title, url, github, tags, children })
       >
         <HStack spacing={3}>
           <Text fontWeight="700" my={2}>{title}</Text>
-          <InfoOutlineIcon onClick={openModal} cursor="pointer"/>
+          <IconButton
+            boxShadow="md"
+            variant="ghost"
+            icon={<InfoOutlineIcon />}
+            onClick={openModal}
+            cursor="pointer"
+          />
         </HStack>
         <HStack spacing={3}>
           {url && (
