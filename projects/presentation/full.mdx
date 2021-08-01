@@ -1,0 +1,23 @@
+import ExternalLink from "../../components/ExternalLink"
+
+export const meta = {
+  title: "presentation",
+  github: "https://github.com/weiseng18/presentation/",
+  tags: ["React", "Next.js", "Chakra UI"],
+}
+
+# Description
+
+Slides for my end of internship presentation at <ExternalLink href="https://open.gov.sg">Open Government Products</ExternalLink>.
+
+# Inspiration
+
+The idea of building slides as a web page came from 2015, during the Projects Day presentations. The original reason was that HTML slides would be much more lightweight compared to `.pptx` files.
+
+I previously got that to work, but it was quite tedious to edit content, because I would need to manually build the HTML structure of the page, and also apply styles manually.
+
+After my first software engineering internship, I learnt about and used web frameworks for the first time in my life. I felt that I could give this idea another shot, especially with the knowledge of React components, and Chakra UI. I also noticed that Chakra UI has a dependency `framer-motion`, a library that helps in web animation, so I took this opportunity to use it in this project.
+
+Writing content is still slightly troublesome, but it was much better than the static HTML page version I created in 2015. I realized that I could test out this project by using it to write slides for my end of internship presentation, and it turned out quite decent.
+
+export default ({ children }) => children
