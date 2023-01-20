@@ -15,6 +15,7 @@ const Navbar = ({ page }) => {
       <HStack spacing={5} divider={<StackDivider borderLeft="1px" borderColor="gray.500" />}>
         <Item href="/" title="Home" selected={page === "index"} />
         <Item href="/projects" title="Projects" selected={page === "projects"} />
+        <Item href="/coursework" title="Coursework" selected={page === "coursework"} />
       </HStack>
     </Flex>
   )
